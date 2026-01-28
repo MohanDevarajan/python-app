@@ -10,7 +10,9 @@ def details():
     return jsonify({
         'time': datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y"),
         'hostname': (socket.gethostname()),
-        'message': 'you are doing well, Mohan :) !'
+        'message': 'you are doing well, Mohan :) !',
+        'deployed_by': 'ArgoCD',
+        'deployed_on': 'Kubernetes'
     })
 
 @app.route('/api/v1/healthz')
